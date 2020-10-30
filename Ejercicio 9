@@ -1,0 +1,35 @@
+
+#include<stdio.h>
+
+int main()
+{
+
+
+    int n,contador,resultado,resdado;
+    int buenas=0,malas=0;
+    printf("Dame la tabla que deseas aprender: ");
+    scanf("%d",&n);
+
+    for(contador=1;contador<=10;contador++)
+    {
+        resultado = n * contador;
+        printf("Cuanto es: %d * %d = ",n,contador);
+        scanf("%d",&resdado);
+
+        if(resdado == resultado)
+        {
+            printf("Valor correcto!\n");
+            buenas = buenas + 1;
+        }
+        else
+        {
+            printf("Lo siento te has equivocado. La respuesta correcta es: %d\n",resultado);
+            malas = malas +1;
+        }
+    }
+
+    printf("Total de buenas: %d \n Total de malas: %d",buenas,malas);
+
+    return 0;
+
+}
