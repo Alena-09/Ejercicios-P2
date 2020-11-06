@@ -2,15 +2,12 @@
 #include<stdio.h>
 
 int main(){
- //Saca utilidad 120, impuestoo y precio final de venta
 
  int n;
  char articulo[50][30];
  float cp[50],utilidad[50],impuesto[50],pventa[50],sVenta,sCP,sUtilidad,sImpuesto,Ta;
  char resp;
  int i;
-
-
     i=0;
 
         do{
@@ -25,7 +22,7 @@ int main(){
         impuesto[i]=(cp[i]+utilidad[i])*.15;
         pventa[i]=(cp[i]+utilidad[i]+impuesto[i]);
 
-		// Se hace la suma total de cada seccion
+		                    // Se hace la suma total de cada seccion
     	sVenta+=pventa[i];
     	sCP+=cp[i];
     	sUtilidad+=utilidad[i];
