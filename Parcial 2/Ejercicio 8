@@ -1,0 +1,49 @@
+
+
+#include<stdio.h>
+
+ int main() {
+
+    int n;
+    int v[30];
+    float cp[30],pv[30],s, pesot, pperv, ppest, ptr;
+
+	printf("Dame el numero de viajes: ");
+    scanf("%d",&n);
+    
+    for(int i=0;i<n;i++){
+        printf("Dame el numero de viaje %d: ",(i+1));
+        scanf("%i",&v[i]);
+        printf("Dame la cantidad de personas de ese viaje : ");
+        scanf("%f",&cp[i]);
+        printf("Dame el peso de ese viaje : ");
+        scanf("%f",&pv[i]);
+
+
+
+	    ptr+=cp[i];
+	    pesot+=pv[i];
+	    pperv= ptr/n;
+	    ppest= pesot/n;
+    }
+
+
+    printf("\n");
+    printf("%s","_______________________________________________________________");
+    printf("\n");
+    printf("Estadistica del dia");
+    printf("\n");
+    printf("%s","_______________________________________________________________");
+
+
+    printf("\n");
+    printf("Cantidad de viajes: %d \n",n);
+    printf("Cantidad de personas transportadas: %.0f personas\n",ptr);
+    printf("Peso transportado (kilos): %.2f Kilos \n",pesot);
+    printf("Promedio de personas por viaje: %.0f personas\n",pperv);
+    printf("Promedio de peso por viaje: %.2f kilos \n", ppest);
+
+
+    return 0;
+ }
+
