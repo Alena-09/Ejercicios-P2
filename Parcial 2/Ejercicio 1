@@ -37,7 +37,7 @@ int main(){
 
     s+=costpro[i];
 
-    printf("Deseas ingresar otro articulo? (si tu respuesta es SI selecciona la tecla ""S"" si tu respuesta es NO selecciona la tecla ""N"" " );
+   printf("Quieres otro articulo? \nsi tu respuesta es SI selecciona la tecla ""S\n" "si tu respuesta es NO selecciona la tecla ""N");
     fflush(stdin);
     scanf("%c",&resp);
 
