@@ -1,0 +1,73 @@
+
+#include<stdio.h>
+
+int main(){
+ //Saca utilidad 120, impuestoo y precio final de venta
+
+ int n;
+ char articulo[50][30];
+ float cp[50],utilidad[50],impuesto[50],pventa[50],sVenta,sCP,sUtilidad,sImpuesto,Ta;
+ char resp;
+ int i;
+
+
+    i=0;
+
+        do{
+        printf("Dame el nombre del articulo %d:",(i+1));
+        fflush(stdin);
+        gets(articulo[i]);
+
+        printf("Ingresa el costo de produccion:");
+        scanf("%f",&cp[i]);
+
+        utilidad[i]=cp[i]*.120;
+        impuesto[i]=(cp[i]+utilidad[i])*.15;
+        pventa[i]=(cp[i]+utilidad[i]+impuesto[i]);
+
+		// Se hace la suma total de cada seccion
+    	sVenta+=pventa[i];
+    	sCP+=cp[i];
+    	sUtilidad+=utilidad[i];
+    	sImpuesto+=impuesto[i];
+
+        printf("Deseas ingresar otro articulo? (si tu respuesta es SI selecciona la tecla ""S"" si tu respuesta es NO selecciona la tecla ""N"" " );
+        fflush(stdin);
+        scanf("%c",&resp);
+
+    i++;
+        }while(resp=='S');
+
+    Ta=i;
+        for(int j=1;j<=110;j++){
+        printf("%s","_");
+
+ }
+        printf("\n");
+        printf("%-20s %-25s %-18s %-18s %-18s\n","Articulo","Costo de produccion","Utilidad (120%)","Impuesto (15%)","Precio de venta");
+
+
+        for(int j=1;j<=110;j++){
+        printf("%s","_");
+
+    }
+        printf("\n");
+        for(int j=0;j<i;j++){
+        printf("%-20s %-25.2f %-18.2f %-18.2f %-18.2f\n",articulo[j],cp[j],utilidad[j],impuesto[j],pventa[j]);
+    }
+
+
+        for(int j=1;j<=110;j++){
+        printf("%s","_");
+    }
+        printf("\n");
+        printf("%-7s  %-11.2f %-25.2f %-18.2f %-18.2f %-18.2f ","Total",Ta,sCP,sUtilidad,sImpuesto,sVenta);
+
+        printf("\n");
+        printf("%s","______________________________________________________________________________________________________________");
+         printf("\n");
+         printf("\n");
+        printf("Gracias por su compra, hasta luego.");
+
+        return 0;
+    }
