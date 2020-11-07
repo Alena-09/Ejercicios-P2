@@ -60,7 +60,13 @@ int main(){
      printf("\n");
      printf("%-20s %-20s %-15s %-15.2f","","","Impuesto 15%",imp);
      printf("\n");
-     printf("%-20s %-20s %-15s %-15.2f","","","Total",To);
+     printf("%-20s %-20s %-15s %-15.2f","","","Total",To); //plus de despedida
+     
+        printf("\n");
+        printf("%s","______________________________________________________________________________________________________________");
+        printf("\n");
+        printf("\n");
+        printf("Gracias por su compra, hasta luego.");
 
     return 0;
 }
