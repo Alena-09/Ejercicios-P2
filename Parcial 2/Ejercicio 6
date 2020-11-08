@@ -1,0 +1,50 @@
+
+#include <stdio.h>
+
+int main()
+{
+    char nombre[30][30], sexo[30], rs;
+    int edad[30], ojos[30], cabello[30];
+    float peso[30], estatura[30];
+    int i=0,m,h;
+    rs='s';
+    
+    while (rs=='s')
+    {
+        printf("Dame el nombre:");
+        scanf("%s",&nombre[i]);
+        printf("\nDame el sexo \n Si es mujer selecciona (con mayusculas) M, si es hombre selecciona (con mayusculas) H:");
+        scanf("%s",&sexo[i]);
+        printf("\nDame la edad:");
+        scanf("%i", &edad[i]);
+        printf("\nDame la estatura sin punto, es decir: Ejemplo 165:");
+        scanf("%f",&estatura[i] );
+        printf("\nDame el peso:");
+        scanf("%f",&peso[i]);
+        printf("\nDame el color de ojos 1.- azul 2.- castano 3.- otro:");
+        scanf("%i",&ojos[i]);
+        printf("\nDame el color de pelo 1.- castano 2.- rubio 3.- otro:");
+        scanf("%i",&cabello[i]);
+        printf("\nQuieres otro alumno?  \nsi tu respuesta es SI selecciona la tecla ""s\n" "si tu respuesta es NO selecciona la tecla "" n ");
+        scanf("%s",&rs);
+    i++;
+    }
+        printf("Mujeres que cumplen con pelo color rubio, ojos azules, estatura entre 165 y 175 peso menor de 55 kg\n");
+        for (m=0;m<=i;m++) //use el && para evitar tener ifs anidados
+
+        if (sexo[m]=='M' && cabello[m]==2 &&ojos[m]==1 && estatura[m]>=165 && estatura[m]<=175 && peso[m]<=55){
+
+                        printf ("%d. %s\n",m,nombre[m]);
+        }
+
+        printf("\n");
+        printf("Hombres que cumplen con ojos castanos, estatura de mas de 170 y peso entre 60 y 70 kg\n");
+        for (h=0;h<=i;h++)
+
+        if (sexo[h]=='H' &&ojos[h]==2 && estatura[h]>170 &&peso[h]>=60 && peso[h]<=70){
+
+                         printf ("%d. %s\n",h,nombre[h]);
+        }
+
+    return 0;
+}
